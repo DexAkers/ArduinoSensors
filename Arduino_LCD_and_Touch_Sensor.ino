@@ -1,10 +1,3 @@
-/******************************************
-  Website: www.elegoo.com
-
-  Time:2017.12.12
-
- ******************************************/
-// include the library code:
 #include <LiquidCrystal.h>
 
 LiquidCrystal lcd(7, 8, 9, 10, 11, 12);
@@ -24,8 +17,6 @@ void  setup()
   lcd.begin(16, 2); //set up the LCD's number of columns and rows:
   pinMode(redpin, OUTPUT); pinMode(bluepin, OUTPUT); pinMode(greenpin, OUTPUT); Serial.begin(9600); //Set up the LED Button
 }
-
-
 
 
 void  loop()
@@ -48,7 +39,7 @@ void Touched() {
   analogWrite(6, 0); analogWrite(5, 255); analogWrite(4, 0); //Turn ON LED
   lcd.display();// Print a message to the LCD.
   lcd.setCursor(0, 0);
-  lcd.print("Hola Janeeeee");
+  lcd.print("Hello User!");
   delay(100);
   //lcd.scrollDisplayLeft();
 }
